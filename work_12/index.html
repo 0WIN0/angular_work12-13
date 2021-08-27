@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS_Work12</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body ng-init="price=100;qty=20;arr=['A','b','c'];age=['100','200','300'];obj={'name': 'A' , 'age' : 50};arrObj=[{'name': 'A' , 'age' : 50},{'name': 'B' , 'age' : 60}]">
+    <div class="container">
+        <h2>AngularJs - Expression</h2>
+        Total Price: {{ price * qty | currency:"THB"}}
+        <p>Total Price 2: <span ng-bind="price * 2 | currency:"THB"></span></p>
+        <input type="number" class="form-control" ng-model="price">
+        show all array: {{ arr }}
+        <br>
+        show array set[0] : {{ arr[0] }}
+        <br>
+        show all object : {{ obj }}
+        <br>
+        show object set name : {{ obj.name }}
+        <br>
+        show object set age : {{ obj.age }}
+        <br>
+        show Array object All : {{ arrObj }}
+        <br>
+        show Array object set arrObj[0].name : {{ arrObj[0].name }}
+        <br>
+        show Array object set arrObj[0].age : {{ arrObj[0].age }}
+        <br>
+        show Array object set arrObj[1].name : {{ arrObj[1].name }}
+        <br>
+        show Array object set arrObj[1].age : {{ arrObj[1].age }}
+    </div>
+</body>
+</html>
